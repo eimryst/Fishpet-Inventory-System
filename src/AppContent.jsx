@@ -3,14 +3,13 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Sidebar from "./components/Sidebar";
 import Header from "./components/Header";
 import Login from "./pages/Login";
+import Profile from "./pages/Profile";
 
 export default function AppContent() {
   return (
     <div>
       <div>
-        <Sidebar
-        // sidebarToggle="false"
-        />
+        <Sidebar sidebarToggle="false" />
       </div>
       <div>
         <Header />
@@ -33,6 +32,7 @@ export default function AppContent() {
             path="/accounts"
             element={<div className="flex justify-center">Accounts</div>}
           />
+          <Route path="/profile" element={<Profile />} />
         </Routes>
       </div>
     </div>
