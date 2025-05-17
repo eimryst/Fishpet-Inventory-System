@@ -9,11 +9,12 @@ export default function AppContent() {
     <div>
       <div>
         <Sidebar
-        // sidebarToggle="false"
+        sidebarToggle="true"
         />
       </div>
       <div>
-        <Header />
+        <Header 
+        headerToggle="false"/>
         <Routes>
           <Route path="/" element={<Login />} />
           <Route path="/home" element={<div>Home</div>} />
