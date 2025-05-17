@@ -22,44 +22,40 @@ export default function Login() {
           </div>
         </header>
       </div>
-      <div className="flex justify-center items-center w-full h-screen">
+      <div className="flex justify-center items-center w-full h-screen py-4">
         <div className="w-full flex items-center justify-center lg:w-1/2">
           <div className="w-11/12 max-w-[700px] px-10 py-20 rounded-3xl bg-white border-2 border-gray-100">
-            <h1 className="text-5xl font-bold uppercase">Log in</h1>
-            <p className="font-medium text-lg text-gray-500 mt-4">
-              Welcome to the Fishpet Inventory System!
-            </p>
+            <h1 className="text-5xl font-bold text-center">Log in</h1>
             <div className="mt-8">
               <form>
                 <div className="flex flex-col">
-                  <label className="text-lg font-medium">Email</label>
+                  <label className="text-md font-medium">Email</label>
                   <input
                     type="email"
-                    placeholder="Enter your email"
-                    className="w-full border-2 border-gray-100 rounded-xl p-4 mt-1 bg-transparent"
+                    placeholder="example@email.com"
+                    className="w-full border-2 border-gray-100 rounded-xl px-4 py-3 mt-1 bg-transparent"
                   />
                 </div>
                 <div className="flex flex-col mt-4">
-                  <label className="text-lg font-medium">Password</label>
+                  <label className="text-md font-medium">Password</label>
                   <div className="relative">
                     <input
                       type={showPassword ? "text" : "password"}
-                      placeholder="Enter your password"
-                      className="w-full border-2 border-gray-100 rounded-xl p-4 mt-1 bg-transparent"
+                      className="w-full border-2 border-gray-100 rounded-xl px-4 py-3 mt-1 bg-transparent"
                     />
                     {showPassword ? (
                       <Eye
                         onClick={() =>
                           setShowPassword((prevState) => !prevState)
                         }
-                        className="absolute right-4 top-5 text-xl cursor-pointer"
+                        className="absolute right-4 top-4 text-xl cursor-pointer"
                       />
                     ) : (
                       <EyeOff
                         onClick={() =>
                           setShowPassword((prevState) => !prevState)
                         }
-                        className="absolute right-4 top-5 text-xl cursor-pointer"
+                        className="absolute right-4 top-4 text-xl cursor-pointer"
                       />
                     )}
                   </div>
@@ -88,7 +84,7 @@ export default function Login() {
             </div>
           </div>
         </div>
-        <div className="hidden relative w-1/2 h-full lg:flex items-center justify-center bg-white">
+        <div className="hidden relative w-1/2 h-full lg:flex items-center justify-center bg-white rounded-3xl">
           <div className="w-60 h-60 rounded-full bg-gradient-to-tr from-blue-500 to-teal-500 animate-spin" />
           <div className="w-full h-1/2 absolute bottom-0 bg-white/10 backdrop-blur-lg" />
         </div>
