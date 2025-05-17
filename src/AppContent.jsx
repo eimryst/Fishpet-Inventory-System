@@ -12,7 +12,8 @@ export default function AppContent() {
         <Sidebar sidebarToggle="false" />
       </div>
       <div>
-        <Header />
+        <Header 
+        headerToggle="false"/>
         <Routes>
           <Route path="/" element={<Login />} />
           <Route path="/home" element={<div>Home</div>} />
