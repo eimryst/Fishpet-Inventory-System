@@ -4,18 +4,18 @@ import Sidebar from "./components/Sidebar";
 import Header from "./components/Header";
 import Login from "./pages/Login";
 import Profile from "./pages/Profile";
+import ForgotPassword from "./pages/ForgotPassword";
 
 export default function AppContent() {
+  // const [sidebarToggle, setSidebarToggle] = useState(false);
   return (
     <div>
+      <div>{/* <Sidebar /> */}</div>
       <div>
-        <Sidebar sidebarToggle="false" />
-      </div>
-      <div>
-        <Header 
-        headerToggle="false"/>
+        {/* <Header /> */}
         <Routes>
           <Route path="/" element={<Login />} />
+          <Route path="/forgot-password" element={<ForgotPassword />} />
           <Route path="/home" element={<div>Home</div>} />
           <Route
             path="/dashboard"

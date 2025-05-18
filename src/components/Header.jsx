@@ -6,7 +6,7 @@ export default function Header({ headerToggle }) {
   return (
     <div className={`bg-gray-200 px-4 py-3 flex justify-between top-0 left-0 right-0 h-16
     ${
-      headerToggle ? "hidden" : "hidden"
+      headerToggle ? "hidden" : ""
     }`}>
       <div className="flex items-center gap-4">
         <button className="p-2 rounded-lg bg-white hover:bg-gray-100 transition-colors">
