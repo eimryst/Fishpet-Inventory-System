@@ -6,7 +6,7 @@ export default function Login() {
   const [showPassword, setShowPassword] = useState(false);
   return (
     <div className="flex flex-col h-screen">
-      <div className="bg-white border-b shadow-sm sticky top-0 w-full z-50">
+      <div className="bg-white border-b shadow-sm sticky top-0 w-full z-50 mb-6">
         <header className="flex justify-between items-center px-3 mx-auto py-2 max-w-6xl">
           <div>
             <img
@@ -22,7 +22,7 @@ export default function Login() {
           </div>
         </header>
       </div>
-      <div className="flex justify-center items-center w-full h-screen py-4">
+      <div className="flex justify-center items-center w-full h-screen pb-4">
         <div className="w-full flex items-center justify-center lg:w-1/2">
           <div className="w-11/12 max-w-[700px] px-10 py-20 rounded-3xl bg-white border-2 border-gray-100">
             <h1 className="text-5xl font-bold text-center">Log in</h1>
