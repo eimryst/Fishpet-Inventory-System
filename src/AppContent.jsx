@@ -1,5 +1,5 @@
-import React from "react";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import React, { useRef, useState } from "react";
+import { BrowserRouter as Router, Route, Routes, useLocation } from "react-router-dom";
 import Sidebar from "./components/Sidebar";
 import Header from "./components/Header";
 import Login from "./pages/Login";
@@ -7,12 +7,31 @@ import Profile from "./pages/Profile";
 import ForgotPassword from "./pages/ForgotPassword";
 
 export default function AppContent() {
-  // const [sidebarToggle, setSidebarToggle] = useState(false);
+  const [sidebarToggle, setSidebarToggle] = useState(false);
+  const location = useLocation();
+
+  // location methods
+  const isLoginPage = location.pathname === "/";
+  const isForgotPasswordPage = location.pathname === "/forgot-password";
+
+  const handleSidebarToggle = (newState) => {
+    setSidebarToggle(newState);
+  };
   return (
     <div>
-      <div>{/* <Sidebar /> */}</div>
+      {!(isLoginPage || isForgotPasswordPage) && (
+        <div
+        >
+          <Sidebar sidebarToggle={sidebarToggle} />
+        </div>
+      )}
       <div>
-        {/* <Header /> */}
+        {!(isLoginPage || isForgotPasswordPage) && (
+          <Header
+            sidebarToggle={sidebarToggle}
+            setSidebarToggle={handleSidebarToggle}
+          />
+        )}
         <Routes>
           <Route path="/" element={<Login />} />
           <Route path="/forgot-password" element={<ForgotPassword />} />
