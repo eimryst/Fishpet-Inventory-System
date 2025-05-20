@@ -1,22 +1,40 @@
-import React from "react";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import React, { useRef, useState } from "react";
+import { BrowserRouter as Router, Route, Routes, useLocation } from "react-router-dom";
 import Sidebar from "./components/Sidebar";
 import Header from "./components/Header";
 import Login from "./pages/Login";
+import Profile from "./pages/Profile";
+import ForgotPassword from "./pages/ForgotPassword";
 
 export default function AppContent() {
+  const [sidebarToggle, setSidebarToggle] = useState(false);
+  const location = useLocation();
+
+  // location methods
+  const isLoginPage = location.pathname === "/";
+  const isForgotPasswordPage = location.pathname === "/forgot-password";
+
+  const handleSidebarToggle = (newState) => {
+    setSidebarToggle(newState);
+  };
   return (
     <div>
+      {!(isLoginPage || isForgotPasswordPage) && (
+        <div
+        >
+          <Sidebar sidebarToggle={sidebarToggle} />
+        </div>
+      )}
       <div>
-        <Sidebar
-        sidebarToggle="true"
-        />
-      </div>
-      <div>
-        <Header 
-        headerToggle="false"/>
+        {!(isLoginPage || isForgotPasswordPage) && (
+          <Header
+            sidebarToggle={sidebarToggle}
+            setSidebarToggle={handleSidebarToggle}
+          />
+        )}
         <Routes>
           <Route path="/" element={<Login />} />
+          <Route path="/forgot-password" element={<ForgotPassword />} />
           <Route path="/home" element={<div>Home</div>} />
           <Route
             path="/dashboard"
@@ -34,6 +52,7 @@ export default function AppContent() {
             path="/accounts"
             element={<div className="flex justify-center">Accounts</div>}
           />
+          <Route path="/profile" element={<Profile />} />
         </Routes>
       </div>
     </div>
