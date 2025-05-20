@@ -1,10 +1,16 @@
 import React, { useRef, useState } from "react";
-import { BrowserRouter as Router, Route, Routes, useLocation } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Route,
+  Routes,
+  useLocation,
+} from "react-router-dom";
 import Sidebar from "./components/Sidebar";
 import Header from "./components/Header";
 import Login from "./pages/Login";
 import Profile from "./pages/Profile";
 import ForgotPassword from "./pages/ForgotPassword";
+import Settings from "./pages/Settings";
 
 export default function AppContent() {
   const [sidebarToggle, setSidebarToggle] = useState(false);
@@ -20,8 +26,7 @@ export default function AppContent() {
   return (
     <div>
       {!(isLoginPage || isForgotPasswordPage) && (
-        <div
-        >
+        <div>
           <Sidebar sidebarToggle={sidebarToggle} />
         </div>
       )}
@@ -53,6 +58,7 @@ export default function AppContent() {
             element={<div className="flex justify-center">Accounts</div>}
           />
           <Route path="/profile" element={<Profile />} />
+          <Route path="/settings" element={<Settings />} />
         </Routes>
       </div>
     </div>
