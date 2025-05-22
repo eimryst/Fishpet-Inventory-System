@@ -235,8 +235,9 @@ export default function Settings() {
                       <span className="ml-3 text-gray-500">units</span>
                     </div>
                     <p className="mt-3 text-sm text-gray-500">
-                      Items with stock below this number will be marked as low
-                      stock and trigger notifications
+                      Items with stock below this number will be marked as low{" "}
+                      <br />
+                      stock and trigger notifications.
                     </p>
                   </div>
                 </div>
