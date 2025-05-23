@@ -1,6 +1,7 @@
 import { Bell, Menu, UserCircle } from "lucide-react";
 import React from "react";
 import { BiNotification } from "react-icons/bi";
+import fishpetHeader from "../assets/fishpet-header.png";
 
 export default function Header({ sidebarToggle, setSidebarToggle }) {
   return (
@@ -14,7 +15,7 @@ export default function Header({ sidebarToggle, setSidebarToggle }) {
         </button>
         <img
           className="h-10 cursor-pointer transition-transform"
-          src="src\assets\fishpet-header.png"
+          src={fishpetHeader}
           alt="fishpet header with logo"
         />
       </div>

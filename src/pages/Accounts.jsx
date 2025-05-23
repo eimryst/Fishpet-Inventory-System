@@ -1,7 +1,10 @@
 import { Eye, Pencil, PlusCircle, Search, Trash2 } from "lucide-react";
 import React from "react";
+import { useLocation, useNavigate } from "react-router-dom";
 
 export default function Accounts() {
+  const navigate = useNavigate();
+
   return (
     <div className="min-h-screen pt-16 sm:pt-20 px-3 sm:px-4 bg-gray-50">
       <div className="max-w-6xl mx-auto mb-4 sm:mb-8 mt-8">
@@ -17,7 +20,10 @@ export default function Accounts() {
             />
             <Search className="absolute left-3 top-2.5 h-4 w-4 text-gray-400" />
           </div>
-          <button className="w-full sm:w-auto flex items-center justify-center gap-2 bg-cyan-600 text-white px-4 py-2 rounded-3xl hover:bg-cyan-700 transition-colors text-sm">
+          <button
+            onClick={() => navigate("/accounts/add")}
+            className="w-full sm:w-auto flex items-center justify-center gap-2 bg-cyan-600 text-white px-4 py-2 rounded-3xl hover:bg-cyan-700 transition-colors text-sm"
+          >
             <PlusCircle size={16} />
             <span>Add Account</span>
           </button>

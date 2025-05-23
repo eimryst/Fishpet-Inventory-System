@@ -12,6 +12,7 @@ import Profile from "./pages/Profile";
 import ForgotPassword from "./pages/ForgotPassword";
 import Settings from "./pages/Settings";
 import Accounts from "./pages/Accounts";
+import AddAccount from "./components/AddAccount";
 
 export default function AppContent() {
   const [sidebarToggle, setSidebarToggle] = useState(false);
@@ -55,6 +56,7 @@ export default function AppContent() {
             element={<div className="flex justify-center">Sales History</div>}
           />
           <Route path="/accounts" element={<Accounts />} />
+          <Route path="/accounts/add" element={<AddAccount />} />
           <Route path="/profile" element={<Profile />} />
           <Route path="/settings" element={<Settings />} />
         </Routes>
