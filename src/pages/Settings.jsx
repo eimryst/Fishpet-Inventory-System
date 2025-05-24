@@ -1,6 +1,8 @@
 import React from "react";
+import { usePageTitle } from "../hooks/usePageTitle";
 
 export default function Settings() {
+  usePageTitle("Settings");
   return (
     <>
       <div className="min-h-screen pt-16 md:pt-20 px-2 sm:px-4 bg-gray-50 flex justify-center items-center">

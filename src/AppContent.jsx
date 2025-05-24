@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useState } from "react";
 import {
   BrowserRouter as Router,
   Route,
@@ -13,6 +13,7 @@ import ForgotPassword from "./pages/ForgotPassword";
 import Settings from "./pages/Settings";
 import Accounts from "./pages/Accounts";
 import AddAccount from "./components/AddAccount";
+import Stocks from "./pages/Stocks";
 
 export default function AppContent() {
   const [sidebarToggle, setSidebarToggle] = useState(false);
@@ -47,10 +48,7 @@ export default function AppContent() {
             path="/dashboard"
             element={<div className="flex justify-center">Dashboard</div>}
           />
-          <Route
-            path="/stocks"
-            element={<div className="flex justify-center">Stocks</div>}
-          />
+          <Route path="/stocks" element={<Stocks />} />
           <Route
             path="/sales-history"
             element={<div className="flex justify-center">Sales History</div>}

@@ -1,8 +1,10 @@
 import { Eye, Pencil, PlusCircle, Search, Trash2 } from "lucide-react";
 import React from "react";
 import { useLocation, useNavigate } from "react-router-dom";
+import { usePageTitle } from "../hooks/usePageTitle";
 
 export default function Accounts() {
+  usePageTitle('Accounts');
   const navigate = useNavigate();
 
   return (

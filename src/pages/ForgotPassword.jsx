@@ -3,8 +3,10 @@ import React, { useState } from "react";
 import { FcGoogle } from "react-icons/fc";
 import { Link, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
+import { usePageTitle } from "../hooks/usePageTitle";
 
 export default function Login() {
+  usePageTitle("Forgot Password");
   const navigate = useNavigate();
   const [showPassword, setShowPassword] = useState(false);
 
@@ -13,8 +15,7 @@ export default function Login() {
     try {
       navigate("/dashboard");
       toast.success("Yey!");
-    } 
-    catch (error) {
+    } catch (error) {
       console.log(error);
       toast.error("Boo!");
     }
@@ -57,9 +58,7 @@ export default function Login() {
                 </div>
                 <div className="mt-8 flex justify-end">
                   <p className="font-medium text-base text-cyan-700 hover:text-cyan-800 transition duration-200 ease-in-out">
-                    <Link to="/">
-                    Log in instead?
-                    </Link>
+                    <Link to="/">Log in instead?</Link>
                   </p>
                 </div>
                 <div className="mt-8 flex flex-col gap-y-4">

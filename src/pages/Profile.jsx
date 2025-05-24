@@ -1,3 +1,4 @@
+import React from "react";
 import {
   Edit,
   Lock,
@@ -10,9 +11,11 @@ import {
   User,
   X,
 } from "lucide-react";
-import React from "react";
+import { usePageTitle } from "../hooks/usePageTitle";
 
 export default function Profile() {
+  usePageTitle("Profile");
+
   return (
     <div className="min-h-screen pt-20 px-4 pb-10 bg-gray-50">
       <h1 className="text-3xl font-bold text-center mb-8">Profile</h1>

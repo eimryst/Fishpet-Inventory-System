@@ -2,13 +2,15 @@ import { CornerDownLeft, Eye, EyeOff } from "lucide-react";
 import React, { useState } from "react";
 import { BsBack } from "react-icons/bs";
 import { useNavigate } from "react-router-dom";
+import { usePageTitle } from "../hooks/usePageTitle";
 
 export default function AddAccount() {
+  usePageTitle("Add Account");
   const navigate = useNavigate();
   const [showPassword, setShowPassword] = useState(false);
   const [loading, setLoading] = useState(false);
   return (
-    <div className="flex flex-col h-screen m-5 mt-20 md:mt-10 items-center justify-center">
+    <div className="flex flex-col h-screen m-5 mt-20 md:mt-15 items-center justify-center">
       <div className="relative bg-white rounded-3xl w-full max-w-4xl sm:mx-4 shadow-xl h-full sm:h-auto max-h-full flex flex-col overflow-hidden justify-center items-center mx-auto">
         <div className="flex w-full justify-between items-center px-4 sm:px-6 py-3 sm:py-4 border-b sticky top-0 bg-gray-200 z-10">
           <h3 className="sm:text-lg font-medium text-gray-800">Add Account</h3>

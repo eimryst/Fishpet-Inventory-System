@@ -3,8 +3,10 @@ import React, { useState } from "react";
 import { FcGoogle } from "react-icons/fc";
 import { Link, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
+import { usePageTitle } from "../hooks/usePageTitle";
 
 export default function Login() {
+  usePageTitle('Log in');
   const navigate = useNavigate();
   const [showPassword, setShowPassword] = useState(false);
 
@@ -39,7 +41,7 @@ export default function Login() {
       </div>
       <div className="flex justify-center items-center w-full h-screen pb-4">
         <div className="w-full flex items-center justify-center lg:w-1/2">
-          <div className="w-11/12 max-w-[700px] px-10 py-20 rounded-3xl bg-white border-2 border-gray-100">
+          <div className="w-11/12 max-w-[700px] px-10 py-20 rounded-3xl shadow-lg bg-white border-2 border-gray-100">
             <h1 className="text-5xl font-bold text-center">Log in</h1>
             <div className="mt-8">
               <form onSubmit={onSubmit}>
@@ -101,7 +103,7 @@ export default function Login() {
             </div>
           </div>
         </div>
-        <div className="hidden relative w-1/2 h-full lg:flex items-center justify-center bg-white rounded-3xl">
+        <div className="hidden relative w-1/2 h-full lg:flex items-center justify-center rounded-3xl">
           <div className="w-60 h-60 rounded-full bg-gradient-to-tr from-blue-500 to-teal-500 animate-spin" />
           <div className="w-full h-1/2 absolute bottom-0 bg-white/10 backdrop-blur-lg" />
         </div>
