@@ -16,7 +16,7 @@ export default function Sidebar({ sidebarToggle }) {
   return (
     <div
       className={`z-50 fixed top-16 wleft-0 h-[calc(100%-64px)] bg-white border-r px-4 py-2 w-64 transition-transform duration-300 ${
-        sidebarToggle ? "-translate-x-full" : "translate-x-0"
+        sidebarToggle ? "translate-x-0" : "-translate-x-full"
       }`}
     >
       <ul>
