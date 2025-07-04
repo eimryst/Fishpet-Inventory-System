@@ -1,6 +1,6 @@
 # ORDER OF TASKS
 
-DESIGN PHASE
+DESIGN PHASE 1
 
 1. Create login page, followed by Forgot Password page. Design only. Only function is redirection between pages.
 2. Create header and sidebar components. Add functionality to navigation and visibility only.
@@ -9,6 +9,10 @@ DESIGN PHASE
 5. Create stocks page. No functionality, only design.
 6. Create sales history page. No functionality, only design.
 7. Create dashboard page. No functionality, only design.
+
+DESIGN PHASE 2(MODALS)
+
+1. Create modals of the buttons in the same order as Design Phase 1.
 
 FUNCTIONALITY PHASE
 

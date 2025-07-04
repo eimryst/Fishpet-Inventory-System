@@ -36,7 +36,7 @@ export default function Stocks() {
         </div>
 
         {/* Search and Filter */}
-        <div className="flex gap-4">
+        <div className="flex gap-4 pb-4 border-b border-gray-200">
           <div className="flex-1 relative">
             <input
               type="text"
@@ -56,6 +56,18 @@ export default function Stocks() {
               <ChevronDown size={20} />
             </button>
           </div>
+        </div>
+
+        {/* Shelves */}
+        {/* Empty state of the shelves */}
+        <div className="text-center py-12 bg-gray-50 rounded-3xl">
+          <h3 className="text-xl font-medium text-gray-500">No shelves yet.</h3>
+          <p className="text-gray-400 mb-4 text-xs">
+            Start adding your shelves now. 😉
+          </p>
+          <button className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-3 rounded-3xl transition-colors w-full sm:w-1/4">
+            Add Shelf
+          </button>
         </div>
       </div>
     </div>
